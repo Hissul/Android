@@ -1,0 +1,8 @@
+<resources>
+    <string name="my_name">Alexander</string>
+    <string name="app_name">TopacAdemy_android</string>
+    <string name="on_create">Активити Создана!</string>
+    <string name="on_start">Активити Старт</string>
+    <string name="on_resume">Активити Resume</string>
+
+</resources>
