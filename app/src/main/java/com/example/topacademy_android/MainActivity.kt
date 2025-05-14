@@ -8,16 +8,6 @@ import java.sql.SQLXML
 
 class MainActivity : AppCompatActivity() {
 
-    companion object{
-        private const val ON_CREATE = "ON_CREATE";
-        private const val ON_START = "ON_START";
-        private const val ON_RESUME = "ON_RESUME";
-        private const val ON_PAUSE = "ON_PAUSE";
-        private const val ON_STOP = "ON_STOP";
-        private const val ON_RESTART = "ON_RESTART";
-        private const val ON_DESTROY = "ON_DESTROY";
-    }
-
     private lateinit var binding: ActivityMainBinding
 
     private var createTime : Long = 0;
@@ -31,8 +21,8 @@ class MainActivity : AppCompatActivity() {
 
         createTime = System.currentTimeMillis();
 
-        Log.i(ON_CREATE, getString(R.string.on_create));
-        Log.i(ON_CREATE, "Старт в $createTime мсек");
+        Log.i(getString(R.string.ON_CREATE), getString(R.string.on_create));
+        Log.i(getString(R.string.ON_CREATE), "Старт в $createTime мсек");
     }
 
     override fun onStart() {
@@ -40,9 +30,9 @@ class MainActivity : AppCompatActivity() {
 
         startTime= System.currentTimeMillis();
 
-        Log.i(ON_START, getString(R.string.on_start));
-        Log.i(ON_START, "Старт в $startTime мсек");
-        Log.i(ON_START, "Разница = " + (startTime - createTime).toString());
+        Log.i(getString(R.string.ON_START), getString(R.string.on_start));
+        Log.i(getString(R.string.ON_START), "Старт в $startTime мсек");
+        Log.i(getString(R.string.ON_START), "Разница = " + (startTime - createTime).toString());
     }
 
     override fun onResume() {
@@ -50,32 +40,32 @@ class MainActivity : AppCompatActivity() {
 
         resumeTime = System.currentTimeMillis();
 
-        Log.i(ON_RESUME, getString(R.string.on_resume));
-        Log.i(ON_START, "Старт в $resumeTime мсек");
-        Log.i(ON_START, "Разница = " + (resumeTime - startTime).toString());
+        Log.i(getString(R.string.ON_RESUME), getString(R.string.on_resume));
+        Log.i(getString(R.string.ON_RESUME), "Старт в $resumeTime мсек");
+        Log.i(getString(R.string.ON_RESUME), "Разница = " + (resumeTime - startTime).toString());
     }
 
     override fun onPause() {
         super.onPause()
 
-        Log.i(ON_PAUSE, getString(R.string.on_pause));
+        Log.i(getString(R.string.ON_PAUSE), getString(R.string.on_pause));
     }
 
     override fun onStop() {
         super.onStop()
 
-        Log.i(ON_STOP, getString(R.string.on_stop));
+        Log.i(getString(R.string.ON_STOP), getString(R.string.on_stop));
     }
 
     override fun onRestart() {
         super.onRestart()
 
-        Log.i(ON_RESTART, getString(R.string.on_restart));
+        Log.i(getString(R.string.ON_RESTART), getString(R.string.on_restart));
     }
 
     override fun onDestroy() {
         super.onDestroy()
 
-        Log.i(ON_DESTROY, getString(R.string.on_destroy));
+        Log.i(getString(R.string.ON_DESTROY), getString(R.string.on_destroy));
     }
 }

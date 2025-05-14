@@ -13,4 +13,12 @@
     <string name="on_restart">Активити Restart</string>
     <string name="on_destroy">Активити Destroy</string>
 
+    <string name="ON_CREATE">ON_CREATE</string>
+    <string name="ON_START">ON_START</string>
+    <string name="ON_RESUME">ON_RESUME</string>
+    <string name="ON_PAUSE">ON_PAUSE</string>
+    <string name="ON_STOP">ON_STOP</string>
+    <string name="ON_RESTART">ON_RESTART</string>
+    <string name="ON_DESTROY">ON_DESTROY</string>
+
 </resources>
