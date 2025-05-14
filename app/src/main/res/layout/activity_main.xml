@@ -9,24 +9,35 @@
 
     <TextView
         android:id="@+id/tw_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_width="47dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="182dp"
+        android:layout_marginTop="326dp"
+        android:layout_marginEnd="182dp"
+        android:layout_marginBottom="369dp"
+        android:text="@string/hello"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="182dp"
-        android:layout_marginEnd="166dp"
-        android:layout_marginBottom="324dp"
+        android:layout_width="92dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="159dp"
+        android:layout_marginTop="373dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="325dp"
         android:text="@string/my_name"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
