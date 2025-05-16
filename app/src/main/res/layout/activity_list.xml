@@ -5,49 +5,27 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    tools:context=".ListActivity">
 
     <TextView
-        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:labelFor="@+id/name_field"
-        android:text="@string/enter_your_name"
+        android:text="@string/list"
         android:textSize="@dimen/textSize"
-        android:layout_marginBottom="@dimen/text_view_margin_bottom"
-        app:layout_constraintBottom_toTopOf="@+id/name_field"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/name_field"
-        android:layout_width="@dimen/edit_text_width"
-        android:layout_height="@dimen/edit_text_height"
-        android:autofillHints="Your name"
-        android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="@dimen/edit_text_margin_top"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/start_button"
+        android:id="@+id/back_button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
+        android:text="@string/back"
+        android:textSize="@dimen/textSize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="@string/start"
-        android:textSize="@dimen/textSize"
-        android:layout_marginBottom="@dimen/button_margin_bottom"/>
-
-
-
-
-
-
-
+        android:layout_marginBottom="@dimen/button_margin_bottom" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

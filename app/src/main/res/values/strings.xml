@@ -1,24 +1,41 @@
 <resources>
 
+    <string name="app_name">My app</string>
+
     <string name="hello">Hello</string>
-    <string name="my_name">Alexander</string>
 
-    <string name="app_name">TopacAdemy_android</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
 
-    <string name="on_create">Активити Create</string>
-    <string name="on_start">Активити Start</string>
-    <string name="on_resume">Активити Resume</string>
-    <string name="on_pause">Активити Pause</string>
-    <string name="on_stop">Активити Stop</string>
-    <string name="on_restart">Активити Restart</string>
-    <string name="on_destroy">Активити Destroy</string>
 
-    <string name="ON_CREATE">ON_CREATE</string>
-    <string name="ON_START">ON_START</string>
-    <string name="ON_RESUME">ON_RESUME</string>
-    <string name="ON_PAUSE">ON_PAUSE</string>
-    <string name="ON_STOP">ON_STOP</string>
-    <string name="ON_RESTART">ON_RESTART</string>
-    <string name="ON_DESTROY">ON_DESTROY</string>
+
+    <string name="calculator">Calculator</string>
+    <string name="start">Start</string>
+    <string name="back">Back</string>
+    <string name="weather">Weather</string>
+    <string name="list">List</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="text_calc_example">0</string>
+    <string name="c">C</string>
+    <string name="backspace">⌫</string>
+    <string name="percent">%</string>
+    <string name="division">÷</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="multiplication">×</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="subtraction">−</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="addition">+</string>
+    <string name="_0">0</string>
+    <string name="coma">.</string>
+    <string name="equally">=</string>
+    <string name="plus_or_minus">+/-</string>
 
 </resources>

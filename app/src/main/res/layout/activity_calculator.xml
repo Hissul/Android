@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculatorActivity">
+
+    <TextView
+        android:id="@+id/result_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:padding="@dimen/text_view_padding"
+        android:text="@string/text_calc_example"
+        android:textSize="@dimen/text_view_calc_size"
+        app:layout_constraintBottom_toTopOf="@+id/calculator_grid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="@dimen/text_view_margin_end"
+        android:layout_marginStart="@dimen/text_view_margin_start"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/break_line_height"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/result_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/break_line_margin_top"
+        android:layout_marginEnd="@dimen/text_view_margin_end"
+        android:layout_marginStart="@dimen/text_view_margin_start"/>
+
+    <!-- Сетка кнопок калькулятора -->
+    <GridLayout
+        android:id="@+id/calculator_grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/grid_layout_margin_top"
+        android:columnCount="4"
+        android:rowCount="5"
+        android:padding="@dimen/grid_layout_padding"
+        app:layout_constraintBottom_toTopOf="@+id/back_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider">
+
+
+
+        <!-- Первая строка -->
+        <Button
+            android:layout_height="@dimen/button_calc_height"
+            android:text="@string/c" />
+
+        <Button
+            android:layout_height="@dimen/button_calc_height"
+            android:text="@string/backspace" />
+
+        <Button
+            android:layout_height="@dimen/button_calc_height"
+            android:text="@string/percent" />
+
+        <Button
+            android:layout_height="@dimen/button_calc_height"
+            android:text="@string/division" />
+
+        <!-- Вторая -->
+        <Button
+            android:layout_height="@dimen/button_calc_height"
+            android:text="@string/_7" />
+
+        <Button
+            android:layout_height="@dimen/button_calc_height"
+            android:text="@string/_8" />
+
+        <Button
+            android:layout_height="@dimen/button_calc_height"
+            android:text="@string/_9" />
+
+        <Button
+            android:layout_height="@dimen/button_calc_height"
+            android:text="@string/multiplication" />
+
+        <!-- Третья -->
+        <Button
+            android:layout_height="@dimen/button_calc_height"
+            android:text="@string/_4" />
+
+        <Button
+            android:layout_height="@dimen/button_calc_height"
+            android:text="@string/_5" />
+
+        <Button
+            android:layout_height="@dimen/button_calc_height"
+            android:text="@string/_6" />
+
+        <Button
+            android:layout_height="@dimen/button_calc_height"
+            android:text="@string/subtraction" />
+
+        <!-- Четвертая -->
+        <Button
+            android:layout_height="@dimen/button_calc_height"
+            android:text="@string/_1" />
+
+        <Button
+            android:layout_height="@dimen/button_calc_height"
+            android:text="@string/_2" />
+
+        <Button
+            android:layout_height="@dimen/button_calc_height"
+            android:text="@string/_3" />
+
+        <Button
+            android:layout_height="@dimen/button_calc_height"
+            android:text="@string/addition" />
+
+
+        <!-- Пятая -->
+        <Button
+            android:layout_height="@dimen/button_calc_height"
+            android:text="@string/_0" />
+
+        <Button
+            android:layout_height="@dimen/button_calc_height"
+            android:text="@string/coma" />
+
+        <Button
+            android:layout_height="@dimen/button_calc_height"
+            android:text="@string/plus_or_minus" />
+
+        <Button
+            android:layout_height="@dimen/button_calc_height"
+            android:text="@string/equally" />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginBottom="@dimen/button_margin_bottom"
+        android:text="@string/back"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
