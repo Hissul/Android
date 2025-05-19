@@ -8,6 +8,7 @@
     tools:context=".CalculatorActivity">
 
     <TextView
+        style="@style/text_view_style"
         android:id="@+id/result_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,10 +24,10 @@
         android:layout_marginStart="@dimen/text_view_margin_start"/>
 
     <View
+        style="@style/view_style"
         android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="@dimen/break_line_height"
-        android:background="@color/black"
         app:layout_constraintTop_toBottomOf="@id/result_view"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,103 +42,143 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/grid_layout_margin_top"
         android:columnCount="4"
-        android:rowCount="5"
         android:padding="@dimen/grid_layout_padding"
+        android:rowCount="5"
         app:layout_constraintBottom_toTopOf="@+id/back_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/divider">
 
 
-
         <!-- Первая строка -->
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
+            android:layout_margin="@dimen/button_calc_margin"
             android:text="@string/c" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
+            android:layout_margin="@dimen/button_calc_margin"
             android:text="@string/backspace" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
+            android:layout_margin="@dimen/button_calc_margin"
             android:text="@string/percent" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
+            android:layout_margin="@dimen/button_calc_margin"
             android:text="@string/division" />
 
         <!-- Вторая -->
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
+            android:layout_margin="@dimen/button_calc_margin"
             android:text="@string/_7" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
+            android:layout_margin="@dimen/button_calc_margin"
             android:text="@string/_8" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
+            android:layout_margin="@dimen/button_calc_margin"
             android:text="@string/_9" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
+            android:layout_margin="@dimen/button_calc_margin"
             android:text="@string/multiplication" />
 
         <!-- Третья -->
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
+            android:layout_margin="@dimen/button_calc_margin"
             android:text="@string/_4" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
+            android:layout_margin="@dimen/button_calc_margin"
             android:text="@string/_5" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
+            android:layout_margin="@dimen/button_calc_margin"
             android:text="@string/_6" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
+            android:layout_margin="@dimen/button_calc_margin"
             android:text="@string/subtraction" />
 
         <!-- Четвертая -->
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
+            android:layout_margin="@dimen/button_calc_margin"
             android:text="@string/_1" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
+            android:layout_margin="@dimen/button_calc_margin"
             android:text="@string/_2" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
+            android:layout_margin="@dimen/button_calc_margin"
             android:text="@string/_3" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
+            android:layout_margin="@dimen/button_calc_margin"
             android:text="@string/addition" />
 
 
         <!-- Пятая -->
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
+            android:layout_margin="@dimen/button_calc_margin"
             android:text="@string/_0" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
+            android:layout_margin="@dimen/button_calc_margin"
             android:text="@string/coma" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
+            android:layout_margin="@dimen/button_calc_margin"
             android:text="@string/plus_or_minus" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
+            android:layout_margin="@dimen/button_calc_margin"
             android:text="@string/equally" />
     </GridLayout>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        style="@style/button_style"
         android:id="@+id/back_button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"

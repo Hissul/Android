@@ -8,6 +8,7 @@
     tools:context=".SecondActivity">
 
     <TextView
+        style="@style/text_view_style"
         android:id="@+id/hello"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,6 +20,7 @@
         android:layout_marginTop="52dp"/>
 
     <TextView
+        style="@style/text_view_style"
         android:id="@+id/name_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,7 +29,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hello" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        style="@style/button_style"
         android:id="@+id/weather_button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
@@ -35,13 +38,14 @@
         android:textSize="@dimen/textSize"
         app:icon="@drawable/weath"
         app:iconGravity="end"
-        app:iconSize="48dp"
+        app:iconSize="@dimen/iconSize"
         app:layout_constraintBottom_toTopOf="@+id/calculator_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name_view" />
 
     <com.google.android.material.button.MaterialButton
+        style="@style/button_style"
         android:id="@+id/calculator_button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
@@ -49,13 +53,14 @@
         android:textSize="@dimen/textSize"
         app:icon="@drawable/calc"
         app:iconGravity="end"
-        app:iconSize="48dp"
+        app:iconSize="@dimen/iconSize"
         app:layout_constraintBottom_toTopOf="@+id/list_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/weather_button" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        style="@style/button_style"
         android:id="@+id/list_button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
@@ -63,7 +68,7 @@
         android:textSize="@dimen/textSize"
         app:icon="@drawable/list"
         app:iconGravity="end"
-        app:iconSize="48dp"
+        app:iconSize="@dimen/iconSize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

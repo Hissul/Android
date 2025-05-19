@@ -8,15 +8,15 @@
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
 
-
+    <string name="start">Start</string>
 
     <string name="calculator">Calculator</string>
-    <string name="start">Start</string>
-    <string name="back">Back</string>
     <string name="weather">Weather</string>
     <string name="list">List</string>
-    <string name="enter_your_name">Enter your name</string>
+    <string name="back">Back</string>
+
     <string name="text_calc_example">0</string>
+
     <string name="c">C</string>
     <string name="backspace">⌫</string>
     <string name="percent">%</string>
@@ -37,5 +37,8 @@
     <string name="coma">.</string>
     <string name="equally">=</string>
     <string name="plus_or_minus">+/-</string>
+
+    <string name="password">Password</string>
+    <string name="email">Email</string>
 
 </resources>
