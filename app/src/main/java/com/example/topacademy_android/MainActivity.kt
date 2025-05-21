@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun validateInput(){
+    private fun validateInput() {
         val email = binding.emailInput.text.toString()
         val password = binding.passwordInput.text.toString()
 
@@ -43,24 +43,24 @@ class MainActivity : AppCompatActivity() {
             isValid = false
         }
         else{
-            binding.emailLayout.error = null
+            binding.passwordLayout.error = null
         }
 
-            // старт SecondAcnivity если все
-            if(isValid){
+        // старт SecondAcnivity если все
+        if(isValid){
 
-                binding.emailLayout.error = null
-                binding.passwordLayout.error = null
-                Toast.makeText(this, "Добро пожаловать!", Toast.LENGTH_SHORT).show()
+            binding.emailLayout.error = null
+            binding.passwordLayout.error = null
+            Toast.makeText(this, "Добро пожаловать!", Toast.LENGTH_SHORT).show()
 
-                val intent = Intent(this, SecondActivity::class.java)
+            val intent = Intent(this, SecondActivity::class.java)
 
-                val name = binding.emailInput.text.toString()
-                if(name.isNotEmpty()){
-                    intent.putExtra("KEY_NAME", name)
-                }
-                startActivity(intent)
+            val name = binding.emailInput.text.toString()
+            if(name.isNotEmpty()){
+                intent.putExtra("KEY_NAME", name)
             }
+            startActivity(intent)
+        }
 
     }
 
