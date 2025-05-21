@@ -18,7 +18,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="@dimen/main_activity_margin">
+        android:layout_marginTop="@dimen/main_activity_margin"
+        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/emailInput"
