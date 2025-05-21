@@ -45,4 +45,9 @@
     <string name="email_error">Введите корректный email</string>
     <string name="password_error">Пароль должен быть больше 6 символов</string>
 
+    <string name="tool_bar_title_weather">Weather</string>
+    <string name="tool_bar_title_second">SecondActivity</string>
+    <string name="tool_bar_title_list">List</string>
+    <string name="tool_bar_title_calculator">Calculator</string>
+
 </resources>
