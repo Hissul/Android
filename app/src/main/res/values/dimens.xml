@@ -8,7 +8,7 @@
     <dimen name="text_view_calc_size">36sp</dimen>
     <dimen name="text_view_margin_end">24dp</dimen>
     <dimen name="text_view_margin_start">24dp</dimen>
-    <dimen name="text_view_margin_top">52dp</dimen>
+    <dimen name="text_view_margin_top">180dp</dimen>
 
     <dimen name="edit_text_width">200dp</dimen>
     <dimen name="edit_text_margin_top">24dp</dimen>
@@ -18,7 +18,10 @@
     <dimen name="button_margin_bottom">24dp</dimen>
 
     <dimen name="button_calc_height">72dp</dimen>
-    <dimen name="button_calc_margin">1dp</dimen>
+    <dimen name="button_calc_margin_top_fist_row">48dp</dimen>
+    <dimen name="button_calc_margin_top">4dp</dimen>
+    <dimen name="button_calc_margin_side">8dp</dimen>
+    <dimen name="button_calc_margin_left_right">4dp</dimen>
 
     <dimen name="break_line_margin_top">8dp</dimen>
     <dimen name="break_line_height">2dp</dimen>
