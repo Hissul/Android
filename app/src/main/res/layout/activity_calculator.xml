@@ -114,13 +114,13 @@
 
     <!-- Вторая -->
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/_7"
+        android:id="@+id/btn7"
         style="@style/button_style"
         android:layout_height="@dimen/button_calc_height"
         android:text="@string/_7"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/_8"
+        app:layout_constraintEnd_toStartOf="@id/btn8"
         app:layout_constraintTop_toBottomOf="@id/c"
 
         android:layout_marginTop="@dimen/button_calc_margin_top"
@@ -128,13 +128,13 @@
         android:layout_marginStart="@dimen/button_calc_margin_side"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/_8"
+        android:id="@+id/btn8"
         style="@style/button_style"
         android:layout_height="@dimen/button_calc_height"
         android:text="@string/_8"
 
-        app:layout_constraintStart_toEndOf="@id/_7"
-        app:layout_constraintEnd_toStartOf="@id/_9"
+        app:layout_constraintStart_toEndOf="@id/btn7"
+        app:layout_constraintEnd_toStartOf="@id/btn9"
         app:layout_constraintTop_toBottomOf="@+id/backspace"
 
         android:layout_marginTop="@dimen/button_calc_margin_top"
@@ -142,12 +142,12 @@
         android:layout_marginStart="@dimen/button_calc_margin_left_right"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/_9"
+        android:id="@+id/btn9"
         style="@style/button_style"
         android:layout_height="@dimen/button_calc_height"
         android:text="@string/_9"
 
-        app:layout_constraintStart_toEndOf="@id/_8"
+        app:layout_constraintStart_toEndOf="@id/btn8"
         app:layout_constraintEnd_toStartOf="@id/multiplication"
         app:layout_constraintTop_toBottomOf="@id/percent"
 
@@ -161,7 +161,7 @@
         android:layout_height="@dimen/button_calc_height"
         android:text="@string/multiplication"
 
-        app:layout_constraintStart_toEndOf="@id/_9"
+        app:layout_constraintStart_toEndOf="@id/btn9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/division"
 
@@ -171,42 +171,42 @@
 
     <!-- Третья -->
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/_4"
+        android:id="@+id/btn4"
         style="@style/button_style"
         android:layout_height="@dimen/button_calc_height"
         android:text="@string/_4"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/_5"
-        app:layout_constraintTop_toBottomOf="@id/_7"
+        app:layout_constraintEnd_toStartOf="@id/btn5"
+        app:layout_constraintTop_toBottomOf="@id/btn7"
 
         android:layout_marginTop="@dimen/button_calc_margin_top"
         android:layout_marginEnd="@dimen/button_calc_margin_left_right"
         android:layout_marginStart="@dimen/button_calc_margin_side"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/_5"
+        android:id="@+id/btn5"
         style="@style/button_style"
         android:layout_height="@dimen/button_calc_height"
         android:text="@string/_5"
 
-        app:layout_constraintStart_toEndOf="@id/_4"
-        app:layout_constraintEnd_toStartOf="@id/_6"
-        app:layout_constraintTop_toBottomOf="@id/_8"
+        app:layout_constraintStart_toEndOf="@id/btn4"
+        app:layout_constraintEnd_toStartOf="@id/btn6"
+        app:layout_constraintTop_toBottomOf="@id/btn8"
 
         android:layout_marginTop="@dimen/button_calc_margin_top"
         android:layout_marginEnd="@dimen/button_calc_margin_left_right"
         android:layout_marginStart="@dimen/button_calc_margin_left_right"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/_6"
+        android:id="@+id/btn6"
         style="@style/button_style"
         android:layout_height="@dimen/button_calc_height"
         android:text="@string/_6"
 
-        app:layout_constraintStart_toEndOf="@id/_5"
+        app:layout_constraintStart_toEndOf="@id/btn5"
         app:layout_constraintEnd_toStartOf="@id/subtraction"
-        app:layout_constraintTop_toBottomOf="@id/_9"
+        app:layout_constraintTop_toBottomOf="@id/btn9"
 
         android:layout_marginTop="@dimen/button_calc_margin_top"
         android:layout_marginEnd="@dimen/button_calc_margin_left_right"
@@ -218,7 +218,7 @@
         android:layout_height="@dimen/button_calc_height"
         android:text="@string/subtraction"
 
-        app:layout_constraintStart_toEndOf="@id/_6"
+        app:layout_constraintStart_toEndOf="@id/btn6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/multiplication"
 
@@ -228,42 +228,42 @@
 
     <!-- Четвертая -->
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/_1"
+        android:id="@+id/btn1"
         style="@style/button_style"
         android:layout_height="@dimen/button_calc_height"
         android:text="@string/_1"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/_2"
-        app:layout_constraintTop_toBottomOf="@id/_4"
+        app:layout_constraintEnd_toStartOf="@id/btn2"
+        app:layout_constraintTop_toBottomOf="@id/btn4"
 
         android:layout_marginTop="@dimen/button_calc_margin_top"
         android:layout_marginEnd="@dimen/button_calc_margin_left_right"
         android:layout_marginStart="@dimen/button_calc_margin_side"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/_2"
+        android:id="@+id/btn2"
         style="@style/button_style"
         android:layout_height="@dimen/button_calc_height"
         android:text="@string/_2"
 
-        app:layout_constraintStart_toEndOf="@id/_1"
-        app:layout_constraintEnd_toStartOf="@id/_3"
-        app:layout_constraintTop_toBottomOf="@id/_5"
+        app:layout_constraintStart_toEndOf="@id/btn1"
+        app:layout_constraintEnd_toStartOf="@id/btn3"
+        app:layout_constraintTop_toBottomOf="@id/btn5"
 
         android:layout_marginTop="@dimen/button_calc_margin_top"
         android:layout_marginEnd="@dimen/button_calc_margin_left_right"
         android:layout_marginStart="@dimen/button_calc_margin_left_right"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/_3"
+        android:id="@+id/btn3"
         style="@style/button_style"
         android:layout_height="@dimen/button_calc_height"
         android:text="@string/_3"
 
-        app:layout_constraintStart_toEndOf="@id/_2"
+        app:layout_constraintStart_toEndOf="@id/btn2"
         app:layout_constraintEnd_toStartOf="@id/addition"
-        app:layout_constraintTop_toBottomOf="@id/_6"
+        app:layout_constraintTop_toBottomOf="@id/btn6"
 
         android:layout_marginTop="@dimen/button_calc_margin_top"
         android:layout_marginEnd="@dimen/button_calc_margin_left_right"
@@ -275,7 +275,7 @@
         android:layout_height="@dimen/button_calc_height"
         android:text="@string/addition"
 
-        app:layout_constraintStart_toEndOf="@id/_3"
+        app:layout_constraintStart_toEndOf="@id/btn3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/subtraction"
 
@@ -286,14 +286,14 @@
 
     <!-- Пятая -->
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/_0"
+        android:id="@+id/btn0"
         style="@style/button_style"
         android:layout_height="@dimen/button_calc_height"
         android:text="@string/_0"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/coma"
-        app:layout_constraintTop_toBottomOf="@id/_1"
+        app:layout_constraintTop_toBottomOf="@id/btn1"
 
         android:layout_marginTop="@dimen/button_calc_margin_top"
         android:layout_marginEnd="@dimen/button_calc_margin_left_right"
@@ -305,9 +305,9 @@
         android:layout_height="@dimen/button_calc_height"
         android:text="@string/coma"
 
-        app:layout_constraintStart_toEndOf="@id/_0"
+        app:layout_constraintStart_toEndOf="@id/btn0"
         app:layout_constraintEnd_toStartOf="@+id/plus_or_minus"
-        app:layout_constraintTop_toBottomOf="@id/_2"
+        app:layout_constraintTop_toBottomOf="@id/btn2"
 
         android:layout_marginTop="@dimen/button_calc_margin_top"
         android:layout_marginEnd="@dimen/button_calc_margin_left_right"
@@ -321,7 +321,7 @@
 
         app:layout_constraintStart_toEndOf="@id/coma"
         app:layout_constraintEnd_toStartOf="@id/equally"
-        app:layout_constraintTop_toBottomOf="@id/_3"
+        app:layout_constraintTop_toBottomOf="@id/btn3"
 
         android:layout_marginTop="@dimen/button_calc_margin_top"
         android:layout_marginEnd="@dimen/button_calc_margin_left_right"
