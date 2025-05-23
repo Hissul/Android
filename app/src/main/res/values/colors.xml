@@ -11,4 +11,9 @@
 
     <color name="toolbar_icon_color">#00008B</color>
 
+    <color name="hot">#CD5C5C</color>
+    <color name="warm">#DAA520</color>
+    <color name="cool">#ADD8E6</color>
+    <color name="cold">#2F4F4F</color>
+
 </resources>

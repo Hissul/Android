@@ -1,12 +1,12 @@
 package com.example.topacademy_android
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.topacademy_android.adapters.CarAdapter
 import com.example.topacademy_android.databinding.ActivityListBinding
 
 
