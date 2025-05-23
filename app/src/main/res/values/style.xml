@@ -25,4 +25,9 @@
         <item name="android:background">@color/dark_blue</item>
     </style>
 
+    <style name="tool_bar_style" parent="Widget.AppCompat.Toolbar">
+        <item name="titleTextColor">@color/dark_blue</item>
+        <item name="iconTint">@drawable/ic_blue_arrow</item>
+    </style>
+
 </resources>

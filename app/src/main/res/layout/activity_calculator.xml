@@ -7,6 +7,18 @@
     android:layout_height="match_parent"
     tools:context=".CalculatorActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        style="@style/tool_bar_style"
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="@dimen/tool_bar_elevation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/tool_bar_title_calculator"
+        android:layout_marginTop="@dimen/tool_bar_margin_top"/>
+
     <TextView
         style="@style/text_view_style"
         android:id="@+id/result_view"
@@ -80,19 +92,19 @@
             style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
             android:layout_margin="@dimen/button_calc_margin"
-            android:text="@string/_7" />
+            android:text="@string/btn7" />
 
         <com.google.android.material.button.MaterialButton
             style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
             android:layout_margin="@dimen/button_calc_margin"
-            android:text="@string/_8" />
+            android:text="@string/btn8" />
 
         <com.google.android.material.button.MaterialButton
             style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
             android:layout_margin="@dimen/button_calc_margin"
-            android:text="@string/_9" />
+            android:text="@string/btn9" />
 
         <com.google.android.material.button.MaterialButton
             style="@style/button_style"
@@ -105,19 +117,19 @@
             style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
             android:layout_margin="@dimen/button_calc_margin"
-            android:text="@string/_4" />
+            android:text="@string/btn4" />
 
         <com.google.android.material.button.MaterialButton
             style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
             android:layout_margin="@dimen/button_calc_margin"
-            android:text="@string/_5" />
+            android:text="@string/btn5" />
 
         <com.google.android.material.button.MaterialButton
             style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
             android:layout_margin="@dimen/button_calc_margin"
-            android:text="@string/_6" />
+            android:text="@string/btn6" />
 
         <com.google.android.material.button.MaterialButton
             style="@style/button_style"
@@ -130,19 +142,19 @@
             style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
             android:layout_margin="@dimen/button_calc_margin"
-            android:text="@string/_1" />
+            android:text="@string/btn1" />
 
         <com.google.android.material.button.MaterialButton
             style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
             android:layout_margin="@dimen/button_calc_margin"
-            android:text="@string/_2" />
+            android:text="@string/btn2" />
 
         <com.google.android.material.button.MaterialButton
             style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
             android:layout_margin="@dimen/button_calc_margin"
-            android:text="@string/_3" />
+            android:text="@string/btn3" />
 
         <com.google.android.material.button.MaterialButton
             style="@style/button_style"
@@ -156,7 +168,7 @@
             style="@style/button_style"
             android:layout_height="@dimen/button_calc_height"
             android:layout_margin="@dimen/button_calc_margin"
-            android:text="@string/_0" />
+            android:text="@string/btn0" />
 
         <com.google.android.material.button.MaterialButton
             style="@style/button_style"

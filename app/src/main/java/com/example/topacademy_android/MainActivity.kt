@@ -24,14 +24,14 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun validateInput(){
+    private fun validateInput() {
         val email = binding.emailInput.text.toString()
         val password = binding.passwordInput.text.toString()
 
         var isValid = true
 
         if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            binding.emailLayout.error = "Введите корректный email"
+            binding.emailLayout.error = getString(R.string.email_error)
             isValid = false
         }
         else{
@@ -39,28 +39,28 @@ class MainActivity : AppCompatActivity() {
         }
 
         if(password.length <= 6){
-            binding.passwordLayout.error = "Пароль должен быть больше 6 символов"
+            binding.passwordLayout.error = getString(R.string.password_error)
             isValid = false
         }
         else{
-            binding.emailLayout.error = null
+            binding.passwordLayout.error = null
         }
 
-            // старт SecondAcnivity если все
-            if(isValid){
+        // старт SecondAcnivity если все
+        if(isValid){
 
-                binding.emailLayout.error = null
-                binding.passwordLayout.error = null
-                Toast.makeText(this, "Добро пожаловать!", Toast.LENGTH_SHORT).show()
+            binding.emailLayout.error = null
+            binding.passwordLayout.error = null
+            Toast.makeText(this, getString(R.string.welcome_toast), Toast.LENGTH_SHORT).show()
 
-                val intent = Intent(this, SecondActivity::class.java)
+            val intent = Intent(this, SecondActivity::class.java)
 
-                val name = binding.emailInput.text.toString()
-                if(name.isNotEmpty()){
-                    intent.putExtra("KEY_NAME", name)
-                }
-                startActivity(intent)
+            val name = binding.emailInput.text.toString()
+            if(name.isNotEmpty()){
+                intent.putExtra("KEY_NAME", name)
             }
+            startActivity(intent)
+        }
 
     }
 
