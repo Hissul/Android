@@ -50,4 +50,12 @@
     <string name="tool_bar_title_list">List</string>
     <string name="tool_bar_title_calculator">Calculator</string>
 
+    <string name="date_format">Дата: %1$s</string>
+    <string name="weather_format">Погода: %1$s</string>
+    <string name="temperature_format">Темп: %1$d – %2$d °C</string>
+    <string name="wind_format">Ветер: до %1$d м/с</string>
+
+    <string name="year_format">Year: %1$d</string>
+    <string name="price_format">Price: $%1$d</string>
+
 </resources>

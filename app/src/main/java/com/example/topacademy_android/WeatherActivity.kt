@@ -1,6 +1,5 @@
 package com.example.topacademy_android
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
@@ -83,13 +82,8 @@ class WeatherActivity : AppCompatActivity() {
                     }
 
                     binding.weatherRecyclerView.adapter = adapter
-
-
-
-                    println("Прогноз погоды: ${weatherData?.dataseries}")
-
-
-                } else {
+                }
+                else {
                     println("Ошибка: ${response.code()}")
                 }
             }

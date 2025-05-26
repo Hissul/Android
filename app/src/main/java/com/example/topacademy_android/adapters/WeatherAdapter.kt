@@ -15,11 +15,12 @@ class WeatherAdapter (private val data: List<DataSeries>, private val onItemClic
         RecyclerView.ViewHolder(binding.root){
 
         fun bind(item: DataSeries) {
+            val context = binding.root.context
 
-            binding.dateTextView.text = "Дата: ${item.date}"
-            binding.weatherTextView.text = "Погода: ${item.weather}"
-            binding.tempTextView.text = "Темп: ${item.temp2m.min} – ${item.temp2m.max} °C"
-            binding.windTextView.text = "Ветер: до ${item.wind10m_max} м/с"
+            binding.dateTextView.text = context.getString(R.string.date_format, item.date.toString())
+            binding.weatherTextView.text = context.getString(R.string.weather_format, item.weather)
+            binding.tempTextView.text = context.getString(R.string.temperature_format, item.temp2m.min, item.temp2m.max)
+            binding.windTextView.text = context.getString(R.string.wind_format, item.wind10m_max)
 
             // Цвет фона и текста в зависимости от температуры
             val (bgColor, textColor) = when {
@@ -29,7 +30,7 @@ class WeatherAdapter (private val data: List<DataSeries>, private val onItemClic
                 else -> R.color.cold to R.color.text_on_cold
             }
 
-            val context = binding.root.context
+
             binding.root.setCardBackgroundColor(ContextCompat.getColor(context, bgColor))
 
             val color = ContextCompat.getColor(context, textColor)

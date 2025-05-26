@@ -1,6 +1,5 @@
 package com.example.topacademy_android.network
 
-import java.util.Date
 
 data class DataSeries(
     val date: Int,
