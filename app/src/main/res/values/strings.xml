@@ -20,11 +20,11 @@
     <string name="c">C</string>
     <string name="backspace">⌫</string>
     <string name="percent">%</string>
-    <string name="division">÷</string>
+    <string name="division">/</string>
     <string name="btn7">7</string>
     <string name="btn8">8</string>
     <string name="btn9">9</string>
-    <string name="multiplication">×</string>
+    <string name="multiplication">*</string>
     <string name="btn4">4</string>
     <string name="btn5">5</string>
     <string name="btn6">6</string>
@@ -49,5 +49,13 @@
     <string name="tool_bar_title_second">SecondActivity</string>
     <string name="tool_bar_title_list">List</string>
     <string name="tool_bar_title_calculator">Calculator</string>
+
+    <string name="date_format">Дата: %1$s</string>
+    <string name="weather_format">Погода: %1$s</string>
+    <string name="temperature_format">Темп: %1$d – %2$d °C</string>
+    <string name="wind_format">Ветер: до %1$d м/с</string>
+
+    <string name="year_format">Year: %1$d</string>
+    <string name="price_format">Price: $%1$d</string>
 
 </resources>

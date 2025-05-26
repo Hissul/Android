@@ -15,21 +15,29 @@ class WeatherAdapter (private val data: List<DataSeries>, private val onItemClic
         RecyclerView.ViewHolder(binding.root){
 
         fun bind(item: DataSeries) {
+            val context = binding.root.context
 
-            binding.dateTextView.text = "Дата: ${item.date}"
-            binding.weatherTextView.text = "Погода: ${item.weather}"
-            binding.tempTextView.text = "Темп: ${item.temp2m.min} – ${item.temp2m.max} °C"
-            binding.windTextView.text = "Ветер: до ${item.wind10m_max} м/с"
+            binding.dateTextView.text = context.getString(R.string.date_format, item.date.toString())
+            binding.weatherTextView.text = context.getString(R.string.weather_format, item.weather)
+            binding.tempTextView.text = context.getString(R.string.temperature_format, item.temp2m.min, item.temp2m.max)
+            binding.windTextView.text = context.getString(R.string.wind_format, item.wind10m_max)
 
-            // Цвет фона в зависимости от температуры
-            val bgColor = when {
-                item.temp2m.max >= 30 -> R.color.hot
-                item.temp2m.max >= 20 -> R.color.warm
-                item.temp2m.max >= 10 -> R.color.cool
-                else -> R.color.cold
+            // Цвет фона и текста в зависимости от температуры
+            val (bgColor, textColor) = when {
+                item.temp2m.max >= 30 -> R.color.hot to R.color.text_on_hot
+                item.temp2m.max >= 20 -> R.color.warm to R.color.text_on_warm
+                item.temp2m.max >= 10 -> R.color.cool to R.color.text_on_cool
+                else -> R.color.cold to R.color.text_on_cold
             }
-            binding.root.setCardBackgroundColor(
-                ContextCompat.getColor(binding.root.context, bgColor))
+
+
+            binding.root.setCardBackgroundColor(ContextCompat.getColor(context, bgColor))
+
+            val color = ContextCompat.getColor(context, textColor)
+            binding.dateTextView.setTextColor(color)
+            binding.weatherTextView.setTextColor(color)
+            binding.tempTextView.setTextColor(color)
+            binding.windTextView.setTextColor(color)
 
             // Обработчик нажатия
             binding.root.setOnClickListener {
