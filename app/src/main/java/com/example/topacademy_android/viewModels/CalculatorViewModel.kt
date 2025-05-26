@@ -10,9 +10,6 @@ class CalculatorViewModel(private val useCase: CalculatorUseCase) : ViewModel(){
     private val _expression = MutableStateFlow("")
     val expression: StateFlow<String> = _expression
 
-    private val _expression = MutableStateFlow("")
-    val expression: StateFlow<String> = _expression
-
     fun appendSymbol(symbol: String) {
         _expression.value += symbol
     }
@@ -23,6 +20,10 @@ class CalculatorViewModel(private val useCase: CalculatorUseCase) : ViewModel(){
 
     fun evaluate() {
         _expression.value = useCase.evaluateExpression(_expression.value)
+    }
+
+    fun backspace() {
+        _expression.value = _expression.value.dropLast(1)
     }
 
 }

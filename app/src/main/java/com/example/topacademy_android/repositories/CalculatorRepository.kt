@@ -4,6 +4,11 @@ class CalculatorRepository {
 
     fun calculate(expression: String): String {
         return try {
+
+            val sanitized = expression
+                .replace('×', '*')
+                .replace('÷', '/')
+
             val result = net.objecthunter.exp4j.ExpressionBuilder(expression)
                 .build()
                 .evaluate()
