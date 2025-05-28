@@ -62,4 +62,6 @@ dependencies {
 
     implementation ("net.objecthunter:exp4j:0.4.8")
 
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
 }
