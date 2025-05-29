@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondActivity">
+    tools:context=".second.presentation.ui.SecondActivity">
 
     <androidx.appcompat.widget.Toolbar
         style="@style/tool_bar_style"
