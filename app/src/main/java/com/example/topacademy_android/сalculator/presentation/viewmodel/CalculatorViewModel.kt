@@ -1,6 +1,7 @@
 package com.example.topacademy_android.сalculator.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
+import com.example.topacademy_android.сalculator.data.CalculatorResult
 import com.example.topacademy_android.сalculator.domain.use_case.CalculatorUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -10,16 +11,16 @@ class CalculatorViewModel(private val useCase: CalculatorUseCase) : ViewModel(){
     private val _expression = MutableStateFlow("")
     val expression: StateFlow<String> = _expression
 
-    fun appendSymbol(symbol: String) {
-        _expression.value += symbol
-    }
-
     fun clear() {
         _expression.value = ""
     }
 
-    fun evaluate() {
-        _expression.value = useCase.evaluateExpression(_expression.value)
+    fun evaluate(expression: String) {
+        val result = useCase.evaluateExpression(expression)
+        when (result) {
+            is CalculatorResult.Success -> _expression.value = result.result
+            is CalculatorResult.Error -> _expression.value = result.message
+        }
     }
 
     fun backspace() {

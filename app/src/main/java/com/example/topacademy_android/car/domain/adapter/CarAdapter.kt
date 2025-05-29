@@ -33,4 +33,5 @@ class CarAdapter(private val cars : List<Car>) : RecyclerView.Adapter<CarAdapter
     override fun onBindViewHolder(holder: CarViewHolder, position: Int) {
         holder.bind(cars[position])
     }
+
 }

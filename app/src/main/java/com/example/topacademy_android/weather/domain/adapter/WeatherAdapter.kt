@@ -57,5 +57,4 @@ class WeatherAdapter (private val data: List<DataSeries>, private val onItemClic
         holder.bind(data[position])
     }
 
-
 }

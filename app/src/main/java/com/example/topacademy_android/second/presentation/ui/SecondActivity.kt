@@ -37,9 +37,10 @@ class SecondActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
 
-        val arrow = AppCompatResources.getDrawable(this, androidx.appcompat.R.drawable.abc_ic_ab_back_material)
-        arrow?.setTint(ContextCompat.getColor(this, R.color.toolbar_icon_color))
-        supportActionBar?.setHomeAsUpIndicator(arrow)
+        val arrowDrawable = AppCompatResources.getDrawable(
+            this, R.drawable.ic_blue_arrow)
+        arrowDrawable?.setTint(ContextCompat.getColor(this, R.color.toolbar_icon_color))
+        supportActionBar?.setHomeAsUpIndicator(arrowDrawable)
     }
 
     private fun setupListeners() {
@@ -74,8 +75,8 @@ class SecondActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == android.R.id.home) {
-            finish(); // Возврат на предыдущую Activity
-            return true;
+            finish() // Возврат на предыдущую Activity
+            return true
         }
         return super.onOptionsItemSelected(item)
     }

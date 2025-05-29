@@ -11,4 +11,5 @@ class ValidateLoginUseCase {
 
         return ValidationResult(emailValid, passwordValid)
     }
+
 }

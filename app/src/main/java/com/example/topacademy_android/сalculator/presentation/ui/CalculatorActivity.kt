@@ -8,6 +8,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import com.example.topacademy_android.R
 import com.example.topacademy_android.databinding.ActivityCalculatorBinding
+import com.example.topacademy_android.сalculator.data.CalculatorRepositoryImpl
 import com.example.topacademy_android.сalculator.domain.repository.CalculatorRepository
 import com.example.topacademy_android.сalculator.domain.use_case.CalculatorUseCase
 import com.example.topacademy_android.сalculator.presentation.viewmodel.CalculatorViewModel
@@ -19,12 +20,10 @@ class CalculatorActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCalculatorBinding
 
     private val viewModel: CalculatorViewModel by lazy {
-        val repository = CalculatorRepository()
+        val repository: CalculatorRepository = CalculatorRepositoryImpl()
         val useCase = CalculatorUseCase(repository)
         CalculatorViewModel(useCase)
     }
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,11 +35,14 @@ class CalculatorActivity : AppCompatActivity() {
         setSupportActionBar(toolBar)
 
         // Включаем стрелку "назад"
-        supportActionBar?.setDisplayHomeAsUpEnabled(true);
-        supportActionBar?.setDisplayShowHomeEnabled(true);
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
 
         // меняем цвет стрелки
-        val arrowDrawable = AppCompatResources.getDrawable(this, androidx.appcompat.R.drawable.abc_ic_ab_back_material)
+        val arrowDrawable = AppCompatResources.getDrawable(
+            this,
+            R.drawable.ic_blue_arrow
+        )
         arrowDrawable?.setTint(ContextCompat.getColor(this, R.color.toolbar_icon_color))
         supportActionBar?.setHomeAsUpIndicator(arrowDrawable)
 
@@ -54,15 +56,13 @@ class CalculatorActivity : AppCompatActivity() {
         setupButtons()
     }
 
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == android.R.id.home) {
-            finish(); // Возврат на предыдущую Activity
-            return true;
+            finish() // Возврат на предыдущую Activity
+            return true
         }
         return super.onOptionsItemSelected(item)
     }
-
 
     private fun setupButtons() {
         val buttons = listOf(
@@ -75,20 +75,42 @@ class CalculatorActivity : AppCompatActivity() {
 
         buttons.forEach { button ->
             button.setOnClickListener {
-                val text = button.text.toString()
-                when (text) {
-                    "+/-" -> viewModel.appendSymbol("-")
-                    "=" -> viewModel.evaluate()
-                    "C" -> viewModel.clear()
-                    "⌫" -> viewModel.backspace()
-                    else -> viewModel.appendSymbol(text)
+                when (button.id) {
+                    R.id.plusMinus -> binding.resultView.append("-")
+                    R.id.btn1 -> binding.resultView.append("1")
+                    R.id.btn2 -> binding.resultView.append("2")
+                    R.id.btn3 -> binding.resultView.append("3")
+                    R.id.btn4 -> binding.resultView.append("4")
+                    R.id.btn5 -> binding.resultView.append("5")
+                    R.id.btn6 -> binding.resultView.append("6")
+                    R.id.btn7 -> binding.resultView.append("7")
+                    R.id.btn8 -> binding.resultView.append("8")
+                    R.id.btn9 -> binding.resultView.append("9")
+                    R.id.btn0 -> binding.resultView.append("0")
+                    R.id.percent -> binding.resultView.append("%")
+                    R.id.division -> binding.resultView.append("/")
+                    R.id.multiplication -> binding.resultView.append("*")
+                    R.id.subtraction -> binding.resultView.append("-")
+                    R.id.addition -> binding.resultView.append("+")
+                    R.id.coma -> binding.resultView.append(".")
+                    R.id.equally -> viewModel.evaluate(binding.resultView.text.toString())
+                    R.id.c -> {
+                        viewModel.clear()
+
+                        binding.resultView.text = ""
+                    }
+                    R.id.backspace -> {
+                        viewModel.backspace()
+
+                        val currentText = binding.resultView.text.toString()
+                        if (currentText.isNotEmpty()) {
+                            binding.resultView.text = currentText.dropLast(1)
+                        }
+                    }
+                    else -> {}
                 }
             }
         }
     }
-
-
-
-
 
 }

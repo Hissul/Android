@@ -26,11 +26,12 @@ class ListActivity : AppCompatActivity() {
         setSupportActionBar(toolBar)
 
         // Включаем стрелку "назад"
-        supportActionBar?.setDisplayHomeAsUpEnabled(true);
-        supportActionBar?.setDisplayShowHomeEnabled(true);
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
 
         // меняем цвет стрелки
-        val arrowDrawable = AppCompatResources.getDrawable(this, androidx.appcompat.R.drawable.abc_ic_ab_back_material)
+        val arrowDrawable = AppCompatResources.getDrawable(
+            this, R.drawable.ic_blue_arrow)
         arrowDrawable?.setTint(ContextCompat.getColor(this, R.color.toolbar_icon_color))
         supportActionBar?.setHomeAsUpIndicator(arrowDrawable)
 
@@ -52,9 +53,10 @@ class ListActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == android.R.id.home) {
-            finish(); // Возврат на предыдущую Activity
-            return true;
+            finish() // Возврат на предыдущую Activity
+            return true
         }
         return super.onOptionsItemSelected(item)
     }
+
 }
