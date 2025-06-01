@@ -7,7 +7,7 @@ import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.topacademy_android.R
-import com.example.topacademy_android.car.domain.adapter.CarAdapter
+import com.example.topacademy_android.car.presentation.adapter.CarAdapter
 import com.example.topacademy_android.car.domain.model.Car
 import com.example.topacademy_android.databinding.ActivityListBinding
 

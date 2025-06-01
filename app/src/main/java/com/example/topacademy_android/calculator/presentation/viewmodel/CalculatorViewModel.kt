@@ -1,8 +1,8 @@
-package com.example.topacademy_android.сalculator.presentation.viewmodel
+package com.example.topacademy_android.calculator.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
-import com.example.topacademy_android.сalculator.data.CalculatorResult
-import com.example.topacademy_android.сalculator.domain.use_case.CalculatorUseCase
+import com.example.topacademy_android.calculator.data.CalculatorResult
+import com.example.topacademy_android.calculator.domain.use_case.CalculatorUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 

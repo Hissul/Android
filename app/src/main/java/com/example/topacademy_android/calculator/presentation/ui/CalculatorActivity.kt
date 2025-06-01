@@ -1,4 +1,4 @@
-package com.example.topacademy_android.сalculator.presentation.ui
+package com.example.topacademy_android.calculator.presentation.ui
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -8,10 +8,10 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import com.example.topacademy_android.R
 import com.example.topacademy_android.databinding.ActivityCalculatorBinding
-import com.example.topacademy_android.сalculator.data.CalculatorRepositoryImpl
-import com.example.topacademy_android.сalculator.domain.repository.CalculatorRepository
-import com.example.topacademy_android.сalculator.domain.use_case.CalculatorUseCase
-import com.example.topacademy_android.сalculator.presentation.viewmodel.CalculatorViewModel
+import com.example.topacademy_android.calculator.data.CalculatorRepositoryImpl
+import com.example.topacademy_android.calculator.domain.repository.CalculatorRepository
+import com.example.topacademy_android.calculator.domain.use_case.CalculatorUseCase
+import com.example.topacademy_android.calculator.presentation.viewmodel.CalculatorViewModel
 import kotlinx.coroutines.launch
 
 

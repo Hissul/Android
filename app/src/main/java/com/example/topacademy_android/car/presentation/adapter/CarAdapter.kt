@@ -1,4 +1,4 @@
-package com.example.topacademy_android.car.domain.adapter
+package com.example.topacademy_android.car.presentation.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
