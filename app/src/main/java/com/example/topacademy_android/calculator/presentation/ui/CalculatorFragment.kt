@@ -1,23 +1,28 @@
 package com.example.topacademy_android.calculator.presentation.ui
 
 import android.os.Bundle
-import android.view.MenuItem
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.example.topacademy_android.R
-import com.example.topacademy_android.databinding.ActivityCalculatorBinding
-import com.example.topacademy_android.calculator.data.CalculatorRepositoryImpl
 import com.example.topacademy_android.calculator.domain.repository.CalculatorRepository
-import com.example.topacademy_android.calculator.domain.use_case.CalculatorUseCase
 import com.example.topacademy_android.calculator.presentation.viewmodel.CalculatorViewModel
+import com.example.topacademy_android.databinding.FragmentCalculatorBinding
+import com.example.topacademy_android.calculator.data.CalculatorRepositoryImpl
+import com.example.topacademy_android.calculator.domain.use_case.CalculatorUseCase
 import kotlinx.coroutines.launch
 
 
-class CalculatorActivity : AppCompatActivity() {
+class CalculatorFragment : Fragment() {
 
-    private lateinit var binding: ActivityCalculatorBinding
+    private var _binding: FragmentCalculatorBinding? = null
+    private val binding get() = _binding!!
 
     private val viewModel: CalculatorViewModel by lazy {
         val repository: CalculatorRepository = CalculatorRepositoryImpl()
@@ -25,43 +30,45 @@ class CalculatorActivity : AppCompatActivity() {
         CalculatorViewModel(useCase)
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentCalculatorBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
-        binding = ActivityCalculatorBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        val toolBar = binding.toolBar
-        setSupportActionBar(toolBar)
+        setupToolbar()
+        observeViewModel()
+        setupButtons()
+    }
 
-        // Включаем стрелку "назад"
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setDisplayShowHomeEnabled(true)
+    private fun setupToolbar() {
+        (activity as? AppCompatActivity)?.apply {
+            setSupportActionBar(binding.toolBar)
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+            supportActionBar?.setDisplayShowHomeEnabled(true)
 
-        // меняем цвет стрелки
-        val arrowDrawable = AppCompatResources.getDrawable(
-            this,
-            R.drawable.ic_blue_arrow
-        )
-        arrowDrawable?.setTint(ContextCompat.getColor(this, R.color.toolbar_icon_color))
-        supportActionBar?.setHomeAsUpIndicator(arrowDrawable)
+            val arrowDrawable = AppCompatResources.getDrawable(this, R.drawable.ic_blue_arrow)
+            arrowDrawable?.setTint(ContextCompat.getColor(this, R.color.toolbar_icon_color))
+            supportActionBar?.setHomeAsUpIndicator(arrowDrawable)
+        }
 
-        // Подписка на обновления выражения
-        lifecycleScope.launch {
+        binding.toolBar.setNavigationOnClickListener {
+            findNavController().popBackStack()
+        }
+    }
+
+    private fun observeViewModel() {
+        viewLifecycleOwner.lifecycleScope.launch {
             viewModel.expression.collect {
                 binding.resultView.text = it
             }
         }
-
-        setupButtons()
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == android.R.id.home) {
-            finish() // Возврат на предыдущую Activity
-            return true
-        }
-        return super.onOptionsItemSelected(item)
     }
 
     private fun setupButtons() {
@@ -96,12 +103,10 @@ class CalculatorActivity : AppCompatActivity() {
                     R.id.equally -> viewModel.evaluate(binding.resultView.text.toString())
                     R.id.c -> {
                         viewModel.clear()
-
                         binding.resultView.text = ""
                     }
                     R.id.backspace -> {
                         viewModel.backspace()
-
                         val currentText = binding.resultView.text.toString()
                         if (currentText.isNotEmpty()) {
                             binding.resultView.text = currentText.dropLast(1)
@@ -113,4 +118,8 @@ class CalculatorActivity : AppCompatActivity() {
         }
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }
