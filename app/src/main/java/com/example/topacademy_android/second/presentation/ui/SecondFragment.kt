@@ -3,6 +3,7 @@ package com.example.topacademy_android.second.presentation.ui
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
@@ -52,6 +53,10 @@ class SecondFragment : Fragment() {
             arrowDrawable?.setTint(ContextCompat.getColor(this, R.color.toolbar_icon_color))
             supportActionBar?.setHomeAsUpIndicator(arrowDrawable)
         }
+
+        binding.toolBar.setNavigationOnClickListener {
+            findNavController().navigate(R.id.LoginFragment)
+        }
     }
 
     private fun setupListeners() {
@@ -83,6 +88,7 @@ class SecondFragment : Fragment() {
             }
         }
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

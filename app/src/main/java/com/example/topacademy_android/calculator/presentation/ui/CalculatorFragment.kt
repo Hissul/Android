@@ -2,6 +2,7 @@ package com.example.topacademy_android.calculator.presentation.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
@@ -45,6 +46,8 @@ class CalculatorFragment : Fragment() {
         setupToolbar()
         observeViewModel()
         setupButtons()
+
+
     }
 
     private fun setupToolbar() {
@@ -59,7 +62,7 @@ class CalculatorFragment : Fragment() {
         }
 
         binding.toolBar.setNavigationOnClickListener {
-            findNavController().popBackStack()
+            findNavController().navigate(R.id.SecondFragment)
         }
     }
 
@@ -117,6 +120,8 @@ class CalculatorFragment : Fragment() {
             }
         }
     }
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()

@@ -43,6 +43,8 @@ class WeatherFragment : Fragment() {
         setupToolbar()
         observeWeather()
         viewModel.fetchWeather(23.09, 113.17)
+
+        setHasOptionsMenu(true)
     }
 
 
@@ -59,7 +61,9 @@ class WeatherFragment : Fragment() {
         }
 
         binding.toolBar.setNavigationOnClickListener {
-            findNavController().popBackStack()
+            //findNavController().popBackStack()
+            //findNavController().navigateUp()
+            findNavController().navigate(R.id.SecondFragment)
         }
     }
 
@@ -85,6 +89,16 @@ class WeatherFragment : Fragment() {
                     Toast.makeText(requireContext(), "Ошибка: $it", Toast.LENGTH_LONG).show()
                 }
             }
+        }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                findNavController().navigateUp() // или findNavController().popBackStack()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
     }
 
