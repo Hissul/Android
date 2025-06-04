@@ -1,15 +1,12 @@
 package com.example.topacademy_android.main.domain.use_case
 
-import android.util.Patterns
 import com.example.topacademy_android.main.domain.model.ValidationResult
+import com.example.topacademy_android.main.domain.validator.LoginValidator
 
-class ValidateLoginUseCase {
-
-    fun execute(email : String, password: String) : ValidationResult{
-        val emailValid = Patterns.EMAIL_ADDRESS.matcher(email).matches()
-        val passwordValid = password.length > 6
-
-        return ValidationResult(emailValid, passwordValid)
+class ValidateLoginUseCase(
+    private val validator: LoginValidator
+) {
+    fun execute(email: String, password: String): ValidationResult {
+        return validator.validate(email, password)
     }
-
 }
