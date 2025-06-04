@@ -61,8 +61,6 @@ class WeatherFragment : Fragment() {
         }
 
         binding.toolBar.setNavigationOnClickListener {
-            //findNavController().popBackStack()
-            //findNavController().navigateUp()
             findNavController().navigate(R.id.SecondFragment)
         }
     }
@@ -92,15 +90,7 @@ class WeatherFragment : Fragment() {
         }
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            android.R.id.home -> {
-                findNavController().navigateUp() // или findNavController().popBackStack()
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

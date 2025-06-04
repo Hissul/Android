@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -10,54 +11,47 @@
         android:name="com.example.topacademy_android.main.presentation.ui.LoginFragment"
         tools:layout="@layout/fragment_login">
 
+        <!-- Переходы из LoginFragment -->
         <action
             android:id="@+id/action_LoginFragment_to_SecondFragment"
             app:destination="@id/SecondFragment"
-            app:popUpTo="@id/LoginFragment"
             app:popUpToInclusive="false"/>
     </fragment>
 
     <fragment
         android:id="@+id/SecondFragment"
         android:name="com.example.topacademy_android.second.presentation.ui.SecondFragment"
-
         tools:layout="@layout/fragment_second">
 
         <!-- Переходы из SecondFragment -->
         <action
             android:id="@+id/action_SecondFragment_to_CalculatorFragment"
             app:destination="@id/CalculatorFragment"
-            app:popUpTo="@id/SecondFragment"
             app:popUpToInclusive="false" />
 
         <action
             android:id="@+id/action_SecondFragment_to_WeatherFragment"
             app:destination="@id/WeatherFragment"
-            app:popUpTo="@id/SecondFragment"
             app:popUpToInclusive="false"/>
 
         <action
             android:id="@+id/action_SecondFragment_to_ListFragment"
             app:destination="@id/ListFragment"
-            app:popUpTo="@id/SecondFragment"
             app:popUpToInclusive="false"/>
     </fragment>
 
     <fragment
         android:id="@+id/CalculatorFragment"
         android:name="com.example.topacademy_android.calculator.presentation.ui.CalculatorFragment"
-
         tools:layout="@layout/fragment_calculator" />
 
     <fragment
         android:id="@+id/WeatherFragment"
         android:name="com.example.topacademy_android.weather.presentation.ui.WeatherFragment"
-
         tools:layout="@layout/fragment_weather" />
 
     <fragment
         android:id="@+id/ListFragment"
         android:name="com.example.topacademy_android.car.presentation.ui.ListFragment"
-
         tools:layout="@layout/fragment_list" />
 </navigation>
