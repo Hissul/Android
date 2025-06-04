@@ -13,7 +13,7 @@ import com.example.topacademy_android.databinding.ActivitySecondBinding
 import com.example.topacademy_android.second.presentation.event.SecondUiEvent
 import com.example.topacademy_android.second.presentation.view_model.SecondViewModel
 import com.example.topacademy_android.weather.presentation.ui.WeatherActivity
-import com.example.topacademy_android.сalculator.presentation.ui.CalculatorActivity
+import com.example.topacademy_android.calculator.presentation.ui.CalculatorActivity
 
 class SecondActivity : AppCompatActivity() {
 

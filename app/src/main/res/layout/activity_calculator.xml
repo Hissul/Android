@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".сalculator.presentation.ui.CalculatorActivity">
+    tools:context=".calculator.presentation.ui.CalculatorActivity">
 
     <androidx.appcompat.widget.Toolbar
         style="@style/tool_bar_style"

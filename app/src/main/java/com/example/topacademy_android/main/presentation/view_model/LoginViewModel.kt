@@ -7,9 +7,9 @@ import com.example.topacademy_android.main.domain.model.ValidationResult
 import com.example.topacademy_android.main.domain.use_case.ValidateLoginUseCase
 import com.example.topacademy_android.main.presentation.event.LoginUiEvent
 
-class LoginViewModel : ViewModel() {
-
-    private val validateLoginUseCase = ValidateLoginUseCase()
+class LoginViewModel(
+    private val validateLoginUseCase: ValidateLoginUseCase
+) : ViewModel() {
 
     private val _validationResult = MutableLiveData<ValidationResult>()
     val validationResult: LiveData<ValidationResult> = _validationResult
@@ -18,7 +18,6 @@ class LoginViewModel : ViewModel() {
     val uiEvent: LiveData<LoginUiEvent> = _uiEvent
 
     fun validate(email: String, password: String){
-
         val result = validateLoginUseCase.execute(email, password)
         _validationResult.value = result
 
@@ -27,6 +26,5 @@ class LoginViewModel : ViewModel() {
             _uiEvent.value = LoginUiEvent.NavigateToSecond(email)
         }
     }
-
 }
 

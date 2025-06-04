@@ -1,6 +1,6 @@
-package com.example.topacademy_android.сalculator.data
+package com.example.topacademy_android.calculator.data
 
-import com.example.topacademy_android.сalculator.domain.repository.CalculatorRepository
+import com.example.topacademy_android.calculator.domain.repository.CalculatorRepository
 import net.objecthunter.exp4j.ExpressionBuilder
 
 class CalculatorRepositoryImpl : CalculatorRepository {
