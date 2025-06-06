@@ -2,7 +2,6 @@ package com.example.topacademy_android.car.presentation.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.ViewGroup
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.ContextCompat
@@ -53,8 +52,8 @@ class ListFragment : Fragment() {
         }
 
         binding.toolBar.setNavigationOnClickListener {
-            findNavController().navigate(R.id.SecondFragment)
-            //findNavController().navigateUp()
+            //findNavController().navigate(R.id.SecondFragment)
+            findNavController().navigateUp()
         }
     }
 

@@ -2,7 +2,6 @@ package com.example.topacademy_android.calculator.presentation.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
@@ -62,8 +61,8 @@ class CalculatorFragment : Fragment() {
         }
 
         binding.toolBar.setNavigationOnClickListener {
-            findNavController().navigate(R.id.SecondFragment)
-            //findNavController().navigateUp()
+            //findNavController().navigate(R.id.SecondFragment)
+            findNavController().navigateUp()
 
         }
     }

@@ -2,7 +2,6 @@ package com.example.topacademy_android.weather.presentation.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
@@ -61,9 +60,7 @@ class WeatherFragment : Fragment() {
         }
 
         binding.toolBar.setNavigationOnClickListener {
-            //findNavController().popBackStack()
-            //findNavController().navigateUp()
-            findNavController().navigate(R.id.SecondFragment)
+            findNavController().navigateUp()
         }
     }
 

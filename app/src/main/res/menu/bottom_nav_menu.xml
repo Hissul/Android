@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<item
+    android:id="@+id/WeatherFragment"
+    android:icon="@drawable/weath"
+    android:title="@string/weather" />
+
+<item
+    android:id="@+id/CalculatorFragment"
+    android:icon="@drawable/calc"
+    android:title="@string/calculator" />
+
+<item
+    android:id="@+id/ListFragment"
+    android:icon="@drawable/list"
+    android:title="@string/list" />
+
+</menu>
