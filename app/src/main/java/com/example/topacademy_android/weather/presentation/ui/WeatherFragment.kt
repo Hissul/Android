@@ -61,6 +61,8 @@ class WeatherFragment : Fragment() {
         }
 
         binding.toolBar.setNavigationOnClickListener {
+            //findNavController().popBackStack()
+            //findNavController().navigateUp()
             findNavController().navigate(R.id.SecondFragment)
         }
     }

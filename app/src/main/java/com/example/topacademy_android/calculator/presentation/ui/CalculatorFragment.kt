@@ -63,6 +63,8 @@ class CalculatorFragment : Fragment() {
 
         binding.toolBar.setNavigationOnClickListener {
             findNavController().navigate(R.id.SecondFragment)
+            //findNavController().navigateUp()
+
         }
     }
 
