@@ -44,7 +44,7 @@ class LoginFragment : Fragment() {
             when (event) {
                 is LoginUiEvent.NavigateToSecond -> {
                     Toast.makeText(requireContext(), "Добро пожаловать!", Toast.LENGTH_SHORT).show()
-                    findNavController().navigate(R.id.action_LoginFragment_to_SecondFragment)
+                    findNavController().navigate(R.id.action_LoginFragment_to_MainScreenFragment)
                 }
                 is LoginUiEvent.ShowToast -> {
                     Toast.makeText(requireContext(), event.message, Toast.LENGTH_SHORT).show()
