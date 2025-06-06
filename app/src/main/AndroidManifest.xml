@@ -25,7 +25,7 @@
             android:name=".weather.presentation.ui.WeatherActivity"
             android:exported="false" />
         <activity
-            android:name=".second.presentation.ui.SecondActivity"
+            android:name=".second.presentation.ui.SeconActivity"
             android:exported="false" />
         <activity
             android:name=".main.presentation.ui.MainActivity"
